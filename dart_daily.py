@@ -14,13 +14,8 @@ import argparse
  
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-dw_crtfc_key = 'c972c649306ac0f8dca6c84d3d147da2bdf3d8c6'
-yh_crtfc_key = '1c018f7ca35780ad1acfb854f7bcd08a8191ebc8'
-sh_crtfc_key = 'c0f14263a3fabda238ca64a9832b6cbb27cd24f6'
-jw_crtfc_key = 'a485c0b278508c02e6b29494d366274c89d662bd'
-wh_crtfc_key = '30f009b897427c86229ca3e70d0f9d226e755650'
-
-CRTFC_KEY = [dw_crtfc_key, yh_crtfc_key, sh_crtfc_key, jw_crtfc_key, wh_crtfc_key]
+with open(BASE_DIR+'\crtfc_key.txt') as key_data:
+    CRTFC_KEY =key_data.readlines()
 
 class Josim:
     def __init__(self, corp_name, corp_code):
